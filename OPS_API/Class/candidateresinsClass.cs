@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace OPS_API.Class
+{
+    public class candidateresinsClass
+    {
+         public string lotno { get; set; }
+     
+        public candidateresinsClass(string lot_no)
+        {
+     
+            lotno = lot_no;
+           
+        }
+    }
+}

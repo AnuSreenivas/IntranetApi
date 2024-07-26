@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3436BC0D-5C83-4A16-9815-CB348DA57311}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OPS_API</RootNamespace>
+    <AssemblyName>OPS_API</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="log.txt" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\BlendsApp.pubxml" />
+    <None Include="Properties\PublishProfiles\IntranetR2App.pubxml" />
+    <None Include="Properties\PublishProfiles\SMS.pubxml" />
+    <None Include="Properties\PublishProfiles\SNMAPP.pubxml" />
+    <None Include="Properties\PublishProfiles\SNOPAPP.pubxml" />
+    <None Include="Properties\PublishProfiles\VMSApp.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Class\agreementapprovalinsClass.cs" />
+    <Compile Include="Class\agreementapprovallistClass.cs" />
+    <Compile Include="Class\agreementrequestinsClass.cs" />
+    <Compile Include="Class\agreementrequestrtrClass.cs" />
+    <Compile Include="Class\agreementstatusinsClass.cs" />
+    <Compile Include="Class\agreementworkdtlsupdClass.cs" />
+    <Compile Include="Class\agreementworkstatusrtrClass.cs" />
+    <Compile Include="Class\agreementworkupdClass.cs" />
+    <Compile Include="Class\areartrClass.cs" />
+    <Compile Include="Class\areawisebagsqtyamtClass.cs" />
+    <Compile Include="Class\assetdtslClass.cs" />
+    <Compile Include="Class\assetrequestlistClass.cs" />
+    <Compile Include="Class\assetserialnortrClass.cs" />
+    <Compile Include="Class\auditdtlClass.cs" />
+    <Compile Include="Class\audithdrClass.cs" />
+    <Compile Include="Class\bankrtrClass.cs" />
+    <Compile Include="Class\biareacntresClass.cs" />
+    <Compile Include="Class\biarearatelistrtrClass.cs" />
+    <Compile Include="Class\biarearatertrClass.cs" />
+    <Compile Include="Class\biareausermapClass.cs" />
+    <Compile Include="Class\bibillssubmittedrtrClass.cs" />
+    <Compile Include="Class\biblbillssubmittedrtrClass.cs" />
+    <Compile Include="Class\biblponortrClass.cs" />
+    <Compile Include="Class\biBLtriplistrtrClass.cs" />
+    <Compile Include="Class\bicertificateviewClass.cs" />
+    <Compile Include="Class\bicultivationrptClass.cs" />
+    <Compile Include="Class\biexpClass.cs" />
+    <Compile Include="Class\biexpenseClass.cs" />
+    <Compile Include="Class\bifareacodertrClass.cs" />
+    <Compile Include="Class\bifarmdetailsrtrClass.cs" />
+    <Compile Include="Class\bifarmlistrtrClass.cs" />
+    <Compile Include="Class\bifarmnamertrClass.cs" />
+    <Compile Include="Class\bigrlistallClass.cs" />
+    <Compile Include="Class\bigrnortrblpayClass.cs" />
+    <Compile Include="Class\biheatvaluesrtrClass.cs" />
+    <Compile Include="Class\biinwardallrtrClass.cs" />
+    <Compile Include="Class\biitemcntresClass.cs" />
+    <Compile Include="Class\biitemrtrClass.cs" />
+    <Compile Include="Class\bilabcntresClass.cs" />
+    <Compile Include="Class\bilablotinsClass.cs" />
+    <Compile Include="Class\bilablotrecClass.cs" />
+    <Compile Include="Class\bilablotrecrtrClass.cs" />
+    <Compile Include="Class\bilabrtrClass.cs" />
+    <Compile Include="Class\bilotClass.cs" />
+    <Compile Include="Class\bilotnolabwisertrClass.cs" />
+    <Compile Include="Class\bimoleculertrClass.cs" />
+    <Compile Include="Class\bipaymenttrackerClass.cs" />
+    <Compile Include="Class\bipaysubmitprnortrClass.cs" />
+    <Compile Include="Class\bipbconfClass.cs" />
+    <Compile Include="Class\bipbconsolidrptClass.cs" />
+    <Compile Include="Class\bipbinsClass.cs" />
+    <Compile Include="Class\bipbinvrtrClass.cs" />
+    <Compile Include="Class\bipblistClass.cs" />
+    <Compile Include="Class\bipbnortrClass.cs" />
+    <Compile Include="Class\bipbwsiertrClass.cs" />
+    <Compile Include="Class\bipngrlnkpbnortrClass.cs" />
+    <Compile Include="Class\bipodtlsClass.cs" />
+    <Compile Include="Class\biprallresultsClass.cs" />
+    <Compile Include="Class\biprareawisemoleculeClass.cs" />
+    <Compile Include="Class\biprconfpatternClass.cs" />
+    <Compile Include="Class\biprinsClass.cs" />
+    <Compile Include="Class\biprlistClass.cs" />
+    <Compile Include="Class\biprmoleculefailcntClass.cs" />
+    <Compile Include="Class\biprnocomboSTNTripClass.cs" />
+    <Compile Include="Class\biprnotriprtrClass.cs" />
+    <Compile Include="Class\biprpbnortrClass.cs" />
+    <Compile Include="Class\biprprintClass.cs" />
+    <Compile Include="Class\biprresultconfirmlotsClass.cs" />
+    <Compile Include="Class\biprresultconsoldClass.cs" />
+    <Compile Include="Class\biprresultsconfClass.cs" />
+    <Compile Include="Class\biprresultslookupClass.cs" />
+    <Compile Include="Class\biprrtrClass.cs" />
+    <Compile Include="Class\biprsingleMoleFaildtlClass.cs" />
+    <Compile Include="Class\biprstrikerrateClass.cs" />
+    <Compile Include="Class\birateinsClass.cs" />
+    <Compile Include="Class\biratelistrtrClass.cs" />
+    <Compile Include="Class\biratertrClass.cs" />
+    <Compile Include="Class\bitotalpassbagsqtyClass.cs" />
+    <Compile Include="Class\bitoxinallresultClass.cs" />
+    <Compile Include="Class\bitoxinarearesultsClass.cs" />
+    <Compile Include="Class\bitoxininsClass.cs" />
+    <Compile Include="Class\bitoxinresconfClass.cs" />
+    <Compile Include="Class\bitoxinrtrClass.cs" />
+    <Compile Include="Class\bitripfreighthandClass.cs" />
+    <Compile Include="Class\bitripinsClass.cs" />
+    <Compile Include="Class\bitriplistrtrClass.cs" />
+    <Compile Include="Class\bitripnortrinwardClass.cs" />
+    <Compile Include="Class\biusersrtrClass.cs" />
+    <Compile Include="Class\bivouchergridlstClass.cs" />
+    <Compile Include="Class\bivouchernortrClass.cs" />
+    <Compile Include="Class\bltripdtlClass.cs" />
+    <Compile Include="Class\bltriphdrClass.cs" />
+    <Compile Include="Class\caballocationhdrClass.cs" />
+    <Compile Include="Class\caballocationlistClass.cs" />
+    <Compile Include="Class\cabrequestapprovalhdrClass.cs" />
+    <Compile Include="Class\cabrequestapprovallistClass.cs" />
+    <Compile Include="Class\cabrequestdriverinsClass.cs" />
+    <Compile Include="Class\cabrequestdriverlistClass.cs" />
+    <Compile Include="Class\cabrequesthdrClass.cs" />
+    <Compile Include="Class\cabrequestlistClass.cs" />
+    <Compile Include="Class\cabrequestTariffClass.cs" />
+    <Compile Include="Class\candidatepositioninsClass.cs" />
+    <Compile Include="Class\candidateprofilelistClass.cs" />
+    <Compile Include="Class\candidateresinsClass.cs" />
+    <Compile Include="Class\candidateresumeinsClass.cs" />
+    <Compile Include="Class\candidateresumelistClass.cs" />
+    <Compile Include="Class\candidatescreeninsClass.cs" />
+    <Compile Include="Class\canteenHeadCountClass.cs" />
+    <Compile Include="Class\contractbalanceClass.cs" />
+    <Compile Include="Class\csinsertreturnClass.cs" />
+    <Compile Include="Class\cspagesClass.cs" />
+    <Compile Include="Class\csuserClass.cs" />
+    <Compile Include="Class\customerlistClass.cs" />
+    <Compile Include="Class\deptlistClass.cs" />
+    <Compile Include="Class\districtClass.cs" />
+    <Compile Include="Class\dprcustsummchartClass.cs" />
+    <Compile Include="Class\dprspicesummchartClass.cs" />
+    <Compile Include="Class\dprsummClass.cs" />
+    <Compile Include="Class\dsprdtlcustpoClass.cs" />
+    <Compile Include="Class\dsprhdrClass.cs" />
+    <Compile Include="Class\dsprprdsummClass.cs" />
+    <Compile Include="Class\dtcodertrClass.cs" />
+    <Compile Include="Class\dthrslistClass.cs" />
+    <Compile Include="Class\einvoicenortrClass.cs" />
+    <Compile Include="Class\emplistClass.cs" />
+    <Compile Include="Class\emplistshiftwiseClass.cs" />
+    <Compile Include="Class\employeepicuploadClass.cs" />
+    <Compile Include="Class\employeesuperviormapClass.cs" />
+    <Compile Include="Class\EmployeeSupervisor.cs" />
+    <Compile Include="Class\empvehiclecheckoutlistClass.cs" />
+    <Compile Include="Class\empvehicleinoutrptlistClass.cs" />
+    <Compile Include="Class\empvehicleinsClass.cs" />
+    <Compile Include="Class\empwilistClass.cs" />
+    <Compile Include="Class\EnquiryClass.cs" />
+    <Compile Include="Class\ExpenseregisterClass.cs" />
+    <Compile Include="Class\farmauditlogrtrClass.cs" />
+    <Compile Include="Class\farmerauthdisplayClass.cs" />
+    <Compile Include="Class\farmerClass.cs" />
+    <Compile Include="Class\farmerlistrptClass.cs" />
+    <Compile Include="Class\farmerlistrpthdrClass.cs" />
+    <Compile Include="Class\farmerlistrtrClass.cs" />
+    <Compile Include="Class\farmerpbClass.cs" />
+    <Compile Include="Class\farminspectionrtrClass.cs" />
+    <Compile Include="Class\farmlistrptClass.cs" />
+    <Compile Include="Class\farmnamelistClass.cs" />
+    <Compile Include="Class\farmproductdosageClass.cs" />
+    <Compile Include="Class\finperiodlistClass.cs" />
+    <Compile Include="Class\G4GFamRollDtlClassClass.cs" />
+    <Compile Include="Class\G4GFamRollHdrClass.cs" />
+    <Compile Include="Class\Gallery.cs" />
+    <Compile Include="Class\gate3visitcheckoutrtrClass.cs" />
+    <Compile Include="Class\gate3visitdtl.cs" />
+    <Compile Include="Class\gate3visithdr.cs" />
+    <Compile Include="Class\gate3visitrpttrtrClass.cs" />
+    <Compile Include="Class\gatepassnoClass.cs" />
+    <Compile Include="Class\getdbuinvdtlsClass.cs" />
+    <Compile Include="Class\getinvdtlsClass.cs" />
+    <Compile Include="Class\GPSListrptClass.cs" />
+    <Compile Include="Class\GstInvoice.cs" />
+    <Compile Include="Class\GstresponseClass.cs" />
+    <Compile Include="Class\headcountClass.cs" />
+    <Compile Include="Class\imageData.cs" />
+    <Compile Include="Class\ImageGallery.cs" />
+    <Compile Include="Class\Images.cs" />
+    <Compile Include="Class\Inboxrequests.cs" />
+    <Compile Include="Class\InsertReturn.cs" />
+    <Compile Include="Class\inspectionlistrptClass.cs" />
+    <Compile Include="Class\intranetroleinsClass.cs" />
+    <Compile Include="Class\intranetrolelistClass.cs" />
+    <Compile Include="Class\InwardClass.cs" />
+    <Compile Include="Class\InwardDtlClass.cs" />
+    <Compile Include="Class\inwarditemlistClass.cs" />
+    <Compile Include="Class\InwardStoreClass.cs" />
+    <Compile Include="Class\InwardStoreDtlClass.cs" />
+    <Compile Include="Class\itassetslistClass.cs" />
+    <Compile Include="Class\itemlookupClass.cs" />
+    <Compile Include="Class\itemstklistClass.cs" />
+    <Compile Include="Class\key_listClass.cs" />
+    <Compile Include="Class\lastlotnoClass.cs" />
+    <Compile Include="Class\lineplanrtrClass.cs" />
+    <Compile Include="Class\loandtlClass.cs" />
+    <Compile Include="Class\loantbClass.cs" />
+    <Compile Include="Class\lotagewarehouseClass.cs" />
+    <Compile Include="Class\manpowerdtlClass.cs" />
+    <Compile Include="Class\manpowerhdrClass.cs" />
+    <Compile Include="Class\mappowerlinewiseClass.cs" />
+    <Compile Include="Class\materailinwardstoreinsClass.cs" />
+    <Compile Include="Class\materialinwardlistClass.cs" />
+    <Compile Include="Class\materialinwardponoClass.cs" />
+    <Compile Include="Class\materiallistClass.cs" />
+    <Compile Include="Class\moisturelistClass.cs" />
+    <Compile Include="Class\moisturelotnoClass.cs" />
+    <Compile Include="Class\monthlykitlistClass.cs" />
+    <Compile Include="Class\newsAndEvents.cs" />
+    <Compile Include="Class\newsAndEventsIn.cs" />
+    <Compile Include="Class\nonemployeeheadcountClass.cs" />
+    <Compile Include="Class\nonempvehicleinlistClass.cs" />
+    <Compile Include="Class\nonempvehiclemstlistClass.cs" />
+    <Compile Include="Class\nonempvehiclerptClass.cs" />
+    <Compile Include="Class\office126comboClass.cs" />
+    <Compile Include="Class\office126logClass.cs" />
+    <Compile Include="Class\operatorrtrClass.cs" />
+    <Compile Include="Class\orderbookcustClass.cs" />
+    <Compile Include="Class\orderbookcustprdClass.cs" />
+    <Compile Include="Class\orderbookprdClass.cs" />
+    <Compile Include="Class\particulars.cs" />
+    <Compile Include="Class\payvoucherinsClass.cs" />
+    <Compile Include="Class\photchClass.cs" />
+    <Compile Include="Class\photochinsClass.cs" />
+    <Compile Include="Class\photochlistClass.cs" />
+    <Compile Include="Class\poinfoClass.cs" />
+    <Compile Include="Class\ponoClass.cs" />
+    <Compile Include="Class\ponomagnartrClass.cs" />
+    <Compile Include="Class\prdtlClass.cs" />
+    <Compile Include="Class\prhdrClass.cs" />
+    <Compile Include="Class\prmrlmstClass.cs" />
+    <Compile Include="Class\projectbriefdtlClass.cs" />
+    <Compile Include="Class\projectlistClass.cs" />
+    <Compile Include="Class\prpbdtlsClass.cs" />
+    <Compile Include="Class\prresultClass.cs" />
+    <Compile Include="Class\prresultsrtrClass.cs" />
+    <Compile Include="Class\puhrslistClass.cs" />
+    <Compile Include="Class\purtrClass.cs" />
+    <Compile Include="Class\racknoClass.cs" />
+    <Compile Include="Class\raterevisionClass.cs" />
+    <Compile Include="Class\resultsrtrClass.cs" />
+    <Compile Include="Class\retaininsClass.cs" />
+    <Compile Include="Class\retainsamplertrClass.cs" />
+    <Compile Include="Class\revisitcomboClass.cs" />
+    <Compile Include="Class\revisitdetailsrtrClass.cs" />
+    <Compile Include="Class\samdespcustClass.cs" />
+    <Compile Include="Class\sampledespdtlviewClass.cs" />
+    <Compile Include="Class\sampledtlrtrClass.cs" />
+    <Compile Include="Class\sampleinsClass.cs" />
+    <Compile Include="Class\samplertrClass.cs" />
+    <Compile Include="Class\screeningdtllistClass.cs" />
+    <Compile Include="Class\screeningidrtrClass.cs" />
+    <Compile Include="Class\sprsummviewClass.cs" />
+    <Compile Include="Class\stocktransfernortrClass.cs" />
+    <Compile Include="Class\talukClass.cs" />
+    <Compile Include="Class\threemonthplanbaseClass.cs" />
+    <Compile Include="Class\threemonthplansubbaseClass.cs" />
+    <Compile Include="Class\tripdtlClass.cs" />
+    <Compile Include="Class\triphdrClass.cs" />
+    <Compile Include="Class\tyreClass.cs" />
+    <Compile Include="Class\Utils.cs" />
+    <Compile Include="Class\vehicleoutrtrClass.cs" />
+    <Compile Include="Class\vehinoutrtrClass.cs" />
+    <Compile Include="Class\villageClass.cs" />
+    <Compile Include="Class\visitlastlogClass.cs" />
+    <Compile Include="Class\visitorClass.cs" />
+    <Compile Include="Class\VisitorDisplayClass.cs" />
+    <Compile Include="Class\VisitorDisplayDtlClass.cs" />
+    <Compile Include="Class\visitordisplayinsClass.cs" />
+    <Compile Include="Class\visitordisplaylistClass.cs" />
+    <Compile Include="Class\visitorinsClass.cs" />
+    <Compile Include="Class\visitrptlistClass.cs" />
+    <Compile Include="Class\vmsuserrightsClass.cs" />
+    <Compile Include="Class\voucherdtlClass.cs" />
+    <Compile Include="Class\voucherhdrClass.cs" />
+    <Compile Include="Class\voucherlistClass.cs" />
+    <Compile Include="Class\workpermitlistClass.cs" />
+    <Compile Include="Class\workpermitnortrClass.cs" />
+    <Compile Include="Controllers\addassetinsController.cs" />
+    <Compile Include="Controllers\agreementapprovalinsController.cs" />
+    <Compile Include="Controllers\agreementapprovallistController.cs" />
+    <Compile Include="Controllers\agreementrequestinsController.cs" />
+    <Compile Include="Controllers\agreementrequestrtrController.cs" />
+    <Compile Include="Controllers\agreementworkdtlsupdController.cs" />
+    <Compile Include="Controllers\agreementworkstatusinsController.cs" />
+    <Compile Include="Controllers\agreementworkstatusrtrController.cs" />
+    <Compile Include="Controllers\area4ratertrController.cs" />
+    <Compile Include="Controllers\assetrequestlistController.cs" />
+    <Compile Include="Controllers\assetserailnortrController.cs" />
+    <Compile Include="Controllers\auditfarminsController.cs" />
+    <Compile Include="Controllers\biopsuserController.cs" />
+    <Compile Include="Controllers\biusersController.cs" />
+    <Compile Include="Controllers\bivouchergriddtlsrtrController.cs" />
+    <Compile Include="Controllers\bivoucherlistController.cs" />
+    <Compile Include="Controllers\bivoucherno4listnprintingController.cs" />
+    <Compile Include="Controllers\bivouchernortrController.cs" />
+    <Compile Include="Controllers\bl2farmerinsController.cs" />
+    <Compile Include="Controllers\blfarmerlistrtrController.cs" />
+    <Compile Include="Controllers\bltripinsController.cs" />
+    <Compile Include="Controllers\caballocationeditinsController.cs" />
+    <Compile Include="Controllers\caballocationinsController.cs" />
+    <Compile Include="Controllers\caballocationlistController.cs" />
+    <Compile Include="Controllers\cabrequestapprovalinsController.cs" />
+    <Compile Include="Controllers\cabrequestapprovallistController.cs" />
+    <Compile Include="Controllers\cabrequestdriverinsController.cs" />
+    <Compile Include="Controllers\cabrequestdriverlistController.cs" />
+    <Compile Include="Controllers\cabrequestinsController.cs" />
+    <Compile Include="Controllers\cabrequestlistController.cs" />
+    <Compile Include="Controllers\candidatepositioninsController.cs" />
+    <Compile Include="Controllers\candidateprofilelistController.cs" />
+    <Compile Include="Controllers\candidateresumeinsController.cs" />
+    <Compile Include="Controllers\candidateresumelistController.cs" />
+    <Compile Include="Controllers\candidatescreeninsController.cs" />
+    <Compile Include="Controllers\canteenHeadCountController.cs" />
+    <Compile Include="Controllers\checkout126listController.cs" />
+    <Compile Include="Controllers\companyinsController.cs" />
+    <Compile Include="Controllers\companylistController.cs" />
+    <Compile Include="Controllers\contractbalanceController.cs" />
+    <Compile Include="Controllers\contractbalcustomerController.cs" />
+    <Compile Include="Controllers\dbuinvnortrController.cs" />
+    <Compile Include="Controllers\deptlistController.cs" />
+    <Compile Include="Controllers\dtcodertrController.cs" />
+    <Compile Include="Controllers\dthrsdelinsController.cs" />
+    <Compile Include="Controllers\dthrsinsController.cs" />
+    <Compile Include="Controllers\dthrslistController.cs" />
+    <Compile Include="Controllers\einvoicenortrController.cs" />
+    <Compile Include="Controllers\einvoiceresponseController.cs" />
+    <Compile Include="Controllers\einvstocktraninvnortrController.cs" />
+    <Compile Include="Controllers\emplistController.cs" />
+    <Compile Include="Controllers\emplistteaClass.cs" />
+    <Compile Include="Controllers\emplistteaController.cs" />
+    <Compile Include="Controllers\employeepicuploadController.cs" />
+    <Compile Include="Controllers\employeesupervisormapController.cs" />
+    <Compile Include="Controllers\empvehiclecheckoutinsController.cs" />
+    <Compile Include="Controllers\empvehiclecheckoutlistController.cs" />
+    <Compile Include="Controllers\empvehicleinoutlistController.cs" />
+    <Compile Include="Controllers\empvehicleinsController.cs" />
+    <Compile Include="Controllers\empwilistController.cs" />
+    <Compile Include="Controllers\epamrlmstController.cs" />
+    <Compile Include="Controllers\epanomrlController.cs" />
+    <Compile Include="Controllers\eumrlmstController.cs" />
+    <Compile Include="Controllers\eunomrlController.cs" />
+    <Compile Include="Controllers\expenseregisterController.cs" />
+    <Compile Include="Controllers\FileUploadController.cs" />
+    <Compile Include="Controllers\finperiodlistController.cs" />
+    <Compile Include="Controllers\fixedexpenseController.cs" />
+    <Compile Include="Controllers\getdbuinvdtlsController.cs" />
+    <Compile Include="Controllers\getinvdtlsController.cs" />
+    <Compile Include="Controllers\GPSListrptController.cs" />
+    <Compile Include="Controllers\headcountController.cs" />
+    <Compile Include="Controllers\htreemonthplansubbaseController.cs" />
+    <Compile Include="Controllers\imageuploadController.cs" />
+    <Compile Include="Controllers\inspectionlistrptController.cs" />
+    <Compile Include="Controllers\intranetroleinsController.cs" />
+    <Compile Include="Controllers\intranetrolelistController.cs" />
+    <Compile Include="Controllers\intranetrolesdelController.cs" />
+    <Compile Include="Controllers\itassetslistController.cs" />
+    <Compile Include="Controllers\itemcodewisesamController.cs" />
+    <Compile Include="Controllers\itemlistlookupController.cs" />
+    <Compile Include="Controllers\itemstklistController.cs" />
+    <Compile Include="Controllers\keyinsController.cs" />
+    <Compile Include="Controllers\key_listController.cs" />
+    <Compile Include="Controllers\loandtlController.cs" />
+    <Compile Include="Controllers\loantbController.cs" />
+    <Compile Include="Controllers\lotagebaseController.cs" />
+    <Compile Include="Controllers\lotagewarehouseController.cs" />
+    <Compile Include="Controllers\nonemployeeheadcountController.cs" />
+    <Compile Include="Controllers\nonemppvehiclerptController.cs" />
+    <Compile Include="Controllers\nonempvehiclecheckoutinsController.cs" />
+    <Compile Include="Controllers\nonempvehicleininsController.cs" />
+    <Compile Include="Controllers\nonempvehicleinlistController.cs" />
+    <Compile Include="Controllers\nonempvehiclemstinsController.cs" />
+    <Compile Include="Controllers\nonempvehilcemstlistController.cs" />
+    <Compile Include="Controllers\office126comboController.cs" />
+    <Compile Include="Controllers\office126logController.cs" />
+    <Compile Include="Controllers\officeentranceinsController.cs" />
+    <Compile Include="Controllers\photochinsController.cs" />
+    <Compile Include="Controllers\photochlistController.cs" />
+    <Compile Include="Controllers\poinfolookupController.cs" />
+    <Compile Include="Controllers\ponomagnartrController.cs" />
+    <Compile Include="Controllers\ponortrController.cs" />
+    <Compile Include="Controllers\revisitinsController.cs" />
+    <Compile Include="Controllers\rmlotagebaseController.cs" />
+    <Compile Include="Controllers\rmlotagewarehouseController.cs" />
+    <Compile Include="Controllers\samdespaccountholderController.cs" />
+    <Compile Include="Controllers\samdespassignedController.cs" />
+    <Compile Include="Controllers\samdespcustController.cs" />
+    <Compile Include="Controllers\sampledespdtlviewController.cs" />
+    <Compile Include="Controllers\samplinglabinvoiceController.cs" />
+    <Compile Include="Controllers\screeningdtllistController.cs" />
+    <Compile Include="Controllers\screeningidrtrController.cs" />
+    <Compile Include="Controllers\shiftwiseemplistController.cs" />
+    <Compile Include="Controllers\stocktransfwernortrController.cs" />
+    <Compile Include="Controllers\storesmonthlykitinsController.cs" />
+    <Compile Include="Controllers\threemonthplanbaseController.cs" />
+    <Compile Include="Controllers\threemonthplanController.cs" />
+    <Compile Include="Controllers\tocheckoutrtrController.cs" />
+    <Compile Include="Controllers\tripeditController.cs" />
+    <Compile Include="Controllers\tripinsController.cs" />
+    <Compile Include="Controllers\userController.cs" />
+    <Compile Include="Controllers\visitordisplaydeleteController.cs" />
+    <Compile Include="Controllers\visitordisplayinsController.cs" />
+    <Compile Include="Controllers\visitordisplaylistController.cs" />
+    <Compile Include="Controllers\visitrptlistController.cs" />
+    <Compile Include="Controllers\vmsuserrightsController.cs" />
+    <Compile Include="Controllers\weighbridgertrController.cs" />
+    <Compile Include="Controllers\weighmentinsController.cs" />
+    <Compile Include="Controllers\workpermitlistController.cs" />
+    <Compile Include="Controllers\workpermitnortrController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Properties\PublishProfiles\BIFarm.pubxml" />
+    <None Include="Properties\PublishProfiles\BIOPS.pubxml" />
+    <None Include="Properties\PublishProfiles\LMS.pubxml" />
+    <None Include="Properties\PublishProfiles\OPS.pubxml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\web.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="assets\AvtGallery\" />
+    <Folder Include="assets\farmerimage\" />
+    <Folder Include="assets\NewsAndEvents\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\retainfgins\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10366</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10361/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

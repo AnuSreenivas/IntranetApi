@@ -1,0 +1,34 @@
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\OPS_API.dll.config
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\OPS_API.dll
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\OPS_API.pdb
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\Newtonsoft.Json.dll
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\System.Net.Http.Formatting.dll
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\System.Web.Cors.dll
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\System.Web.Http.Cors.dll
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\System.Web.Http.dll
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\System.Web.Http.WebHost.dll
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\System.Net.Http.Formatting.xml
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\System.Web.Http.xml
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\System.Web.Http.Cors.xml
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\Newtonsoft.Json.xml
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\bin\System.Web.Http.WebHost.xml
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\obj\Release\BI_OPS.csprojResolveAssemblyReference.cache
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\obj\Release\OPS_API.dll
+H:\SNOP_JSON\OPS_API - Copy\OPS_API\obj\Release\OPS_API.pdb
+H:\SNOP_JSON\BIOPS\OPS_API\bin\OPS_API.dll.config
+H:\SNOP_JSON\BIOPS\OPS_API\bin\OPS_API.dll
+H:\SNOP_JSON\BIOPS\OPS_API\bin\OPS_API.pdb
+H:\SNOP_JSON\BIOPS\OPS_API\bin\Newtonsoft.Json.dll
+H:\SNOP_JSON\BIOPS\OPS_API\bin\System.Net.Http.Formatting.dll
+H:\SNOP_JSON\BIOPS\OPS_API\bin\System.Web.Cors.dll
+H:\SNOP_JSON\BIOPS\OPS_API\bin\System.Web.Http.Cors.dll
+H:\SNOP_JSON\BIOPS\OPS_API\bin\System.Web.Http.dll
+H:\SNOP_JSON\BIOPS\OPS_API\bin\System.Web.Http.WebHost.dll
+H:\SNOP_JSON\BIOPS\OPS_API\bin\System.Net.Http.Formatting.xml
+H:\SNOP_JSON\BIOPS\OPS_API\bin\System.Web.Http.xml
+H:\SNOP_JSON\BIOPS\OPS_API\bin\System.Web.Http.Cors.xml
+H:\SNOP_JSON\BIOPS\OPS_API\bin\Newtonsoft.Json.xml
+H:\SNOP_JSON\BIOPS\OPS_API\bin\System.Web.Http.WebHost.xml
+H:\SNOP_JSON\BIOPS\OPS_API\obj\Release\BI_OPS.csprojResolveAssemblyReference.cache
+H:\SNOP_JSON\BIOPS\OPS_API\obj\Release\OPS_API.dll
+H:\SNOP_JSON\BIOPS\OPS_API\obj\Release\OPS_API.pdb

@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace OPS_API.Class
+{
+    public class visitlastlogClass
+    {
+      
+        public String visitcode { get; set; }
+        public String companyname { get; set; }
+        public string visitorname { get; set; }
+        public string empname { get; set; }
+        public DateTime sysdate { get; set; }
+        public string purpose { get; set; }
+        public string filedetails { get; set; }
+        public DateTime officein { get; set; }
+        public DateTime officeout { get; set; }
+
+        public visitlastlogClass(String _visitcode, string _companyname, string _visitorname, string _empname, DateTime _sysdate, string _purpose, string _filedetails, DateTime _officein, DateTime _officeout)
+        {
+            visitcode = _visitcode;
+            companyname = _companyname;
+            visitorname = _visitorname;
+            empname = _empname;
+            sysdate = _sysdate;
+            purpose = _purpose;
+            filedetails = _filedetails;
+            officein = _officein;
+            officeout = _officeout;
+        }
+
+    }
+}
